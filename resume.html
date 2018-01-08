@@ -1,27 +1,36 @@
-<HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
 <head>
 <title>Aaron Faupell</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style>
+#container {
+  background: #ededed;
+  padding: 5em;
+}
 body {
-  font-family: Arial, Sans-Serif;
-  background: white;
+  font-family: 'Open Sans', Arial, Sans-Serif;
+  background: #fafafa;
   margin-left: 3em;
   margin-right: 3em;
 }
+#heading {
+  padding-bottom: 2em;
+}
 #name {
-  font-family: Impact, Arial;
+  //font-family: "Montserrat", Impact, Arial;
+  font-family: "Montserrat";
   font-size: 250%;
-  padding-top: .5em;
+  padding-top: 1em;
   padding-bottom: .25em;
-  line-height: .5em;
+  line-height: 0.5em;
+  font-weight: 800;
 }
 #contact {
-  /* padding-left: 1em;*/
 }
 #title {
-  /* padding-left: 1em; */
-  font-weight: bold;
-  /* font-size: 150%; */
+  font-weight: 700;
 }
 p {
   text-indent: 0em;
@@ -34,27 +43,15 @@ a:visited {
   color: #009999;
   text-decoration: none;
 }
-hr {
-  size: 2px;
-  border-style: solid;
-  border: 1px solid black;
-}
-hr.secondary {
-  width: 75%;
-  width: 100%;
-  size: 1px;
-  border-style: solid;
-  border: 1px solid black;
-  margin-top: 2em;
-}
 .section {
+  font-family: 'Montserrat', Impact, Arial;
   text-transform: uppercase;
   font-size: 125%;
-  letter-spacing: .4em;
-  font-weight: bold;
+  font-weight: 500;
   line-height: .5em;
-  padding-top: .25em;
+  padding-top: .75em;
   padding-bottom: .5em;
+  border-top: 1px solid gray;
 }
 .date {
   float: right;
@@ -73,10 +70,17 @@ hr.secondary {
   font-style: italic;
 }
 ul {
-  list-style-type: disc;
-  line-height: 1.1em;
-  padding-left: 0px;
+  list-style-type: circle; 
+  padding-left: 2em;
   margin-left: 0px;
+}
+li {
+  #list-style-type: none;
+}
+li:before {
+  #content: '\2022';
+  #color: red;
+  #padding-left: 0px;
 }
 
 ul.job {
@@ -87,17 +91,17 @@ ul.job {
 </head>
 <body>
 
-<div id=name>Aaron Faupell</div>
-<div id=title>DevOps, Operations and Infrastructure Engineer</div>
-<a id=contact href="mailto:aaronf@gmail.com">aaronf@gmail.com</a>
+<div id="container">
+<div id="heading">
+<div id="name">Aaron Faupell</div>
+<div id="title">DevOps, Operations and Infrastructure Engineer</div>
+<a id="contact" href="mailto:aaronf@gmail.com">aaronf@gmail.com</a>
+</div>
 
-<hr class=secondary>
-
-<div class=section>Summary of Qualifications</div>
+<div class="section">Summary of Qualifications</div>
 <p>Over 15 years experience administering Unix and Linux systems. Extensive knowledge of many facets of administration from architecture and tuning to troubleshooting and programming. Strong multi-tasking capabilities. Works well in a team or on individual projects and tasks.</p>
 
-<hr class=secondary>
-<div class=section>Skills and Knowledge</div>
+<div class="section">Skills and Knowledge</div>
 <ul>
 <li>linux admin
 <li>hadoop
@@ -120,29 +124,30 @@ ul.job {
 <li>Assembling, installing, and troubleshooting hardware in PCs and Enterprise level Sun servers, including HBAs, hard drives, network cards, memory and processors
 </ul>
 
-<hr class=secondary>
 
-<div class=section>Professional Experience</div><br>
+<div class="section">Professional Experience</div><br>
 
-<div class=date>Nov 2013 &#0150; Present<br>Cupertino, CA</div>
-<div class=company>Apple</div>
-<div class=title>Senior DevOps Engineer</div>
+<div class="date">Nov 2013 &#0150; Present<br>Cupertino, CA</div>
+<div class="company">Apple</div>
+<div class="title">Senior DevOps Engineer</div>
 <p></p>
-<ul class=job>
+<ul class="job">
 <li>Design and implement a system for load balacing 100s of millions of MacOS and iOS users across more than 20 globally distributed datacenters. Easier to use and better performance than commercially available solutions.
-<li>Develop tools to streamline Ops and Engineering processes and distribute information throughout the organization
-<li>Work on the main search API server (implemented in Go) to add Ops features and improve monitoring.
+<li>Develop tools to streamline Ops and Engineering processes and create dashboards and visualizations to distribute relevant and understandable information throughout the organization
+<li>Work on the main search API server (implemented in Go) to add operability features and improve monitoring.
+<li>Write code to analyze tens of thousands of events per second in realtime in order to gain operational insight into the real world performance of our service.
 <li>Main point of contact for monitoring, telemetry, and dashboards.
-<li>git integration
+<li>Develop code to integrate Github and Jenkins to power Continuous Integration implementation.
+<li>Write map reduce jobs to perform statisical analysis of hundreds of terabytes of data in order to reason about the best ways to improve the service for our customers.
 </ul>
 
 <br>
-<div class=date>Jun 2012 &#0150; Nov 2013<br>San Francisco, CA</div>
-<div class=company>Topsy Labs (Acquired by Apple)</div>
-<div class=title>Senior Operations Engineer</div>
+<div class="date">Jun 2012 &#0150; Nov 2013<br>San Francisco, CA</div>
+<div class="company">Topsy Labs (Acquired by Apple)</div>
+<div class="title">Senior Operations Engineer</div>
 <p>Topsy Labs was a small company specializing in social media search and analytics. With access to the Twitter firehose we would process, crawl, and store an average of 8000 tweets per second in near realtime and maintain a storage system that allowed querying the entire Twitter corpus of over 450 billion documents in less than a second.</p>
 <p>As a member of the four person operations team I was involved in the daily maintenance of over 3000 of our self hosted servers. The Operations team would update software configurations via Puppet, design and implement monitoring and alerting solutions, coordinate with QA and Engineering to perform software deployments, as well as handle oncall incidents. Addtionally we would plan for capacity to match Twitter growth as well as spec capacity for new Topsy services, and then deploy and bring up any new hardware.</p>
-<ul class=job>
+<ul class="job">
 <li>Discovered gaps in information availability and productivity of Ops, QA, and Engineering teams and created web based tools to highlight pertinent information and streamline processes, all self directed
 <li>Architected and implemented an externally acessible application monitoring dashboard to replace Pingdom
 <li>Maintained multiple Hadoop HDFS, Hbase, and MR clusters totalling more than 4pb and 1200 nodes
@@ -153,11 +158,11 @@ ul.job {
 </ul>
 
 <br>
-<div class=date>Jun 2007 &#0150; Jun 2012<br>Sunnyvale, CA</div>
-<div class=company>Yahoo!</div>
-<div class=title>Service Engineer</div>
+<div class="date">Jun 2007 &#0150; Jun 2012<br>Sunnyvale, CA</div>
+<div class="company">Yahoo!</div>
+<div class="title">Service Engineer</div>
 <p>Service Engineers at Yahoo are responsible for the deployment, performance, reliability, capacity planning, and monitoring of large distributed systems. I worked directly with engineers, QA, systems and network administrators, and more to plan and implement architectures to run display advertising services used across every Yahoo property.</p>
-<ul class=job>
+<ul class="job">
 <li>Architected and implemented a service used by every front end webserver in the company - over 15,000 servers - to find the correct ad servers to connect to. This service is also what allows the ads group to perform load balancing and shift traffic during deployments or incidents
 <li>Designed and wrote a new monitoring system for the ads group (3000+ servers) to make it more scalable, have tighter integration with graphs and metrics, and reduce false positives so that thresholds could be set more appropriately and pages are more relevant. The system includes a JQuery based web UI which streamlines common monitoring tasks.
 <li>Troubleshoot performance problems involving Linux, MySQL, and networking
@@ -167,11 +172,11 @@ ul.job {
 </ul>
 
 <br>
-<div class=date>Jan 2005 &#0150; Jun 2007<br>Milpitas, CA</div>
-<div class=company>KLA-Tencor</div>
-<div class=title>Senior Unix Systems Administrator</div>
+<div class="date">Jan 2005 &#0150; Jun 2007<br>Milpitas, CA</div>
+<div class="company">KLA-Tencor</div>
+<div class="title">Senior Unix Systems Administrator</div>
 <p>Originally brought in to help with a large disaster recovery project, I ended up architecting and implementing the entire project. I was since rolled into the corporate IT unix group, supporting the production environment and overseeing new IT projects.</p>
-<ul class=job>
+<ul class="job">
 <li>Implemented Nagios company wide and wrote custom services to fill its gaps in metrics and visualization
 <li>Wrote custom monitoring and reporting tools for the Netbackup infrastructure
 <li>Administer IBM ESS-800 Shark, IBM DS8100, EMC Clariion, and EMC Celerra SAN storage arrays with Brocade switches. Including layout architecting, LUN creation and assignment, and zoning.
@@ -184,12 +189,13 @@ ul.job {
 </ul>
 <br>
 
-<div class=date>Jan &#0150; May 2004<br>Atlanta, GA</div>
-<div class=company>Communication Technical Systems</div>
-<div class=title>SAN Administrator</div>
+<!--
+<div class="date">Jan &#0150; May 2004<br>Atlanta, GA</div>
+<div class="company">Communication Technical Systems</div>
+<div class="title">SAN Administrator</div>
 <p>CTS was a major contractor to EMC Professional Services.<br>
 Representing myself as EMC Professional Services and travelling to remote customer locations to install SAN and NAS devices, and train employees on their usage and administration.</p>
-<ul class=job>
+<ul class="job">
 <li>Install and configure EMC CLARiiON SAN storage arrays.
 <li>Install and configure EMC Celerra NAS storage devices.
 <li>Cable, zone, and configure McData Fibrechannel switches.
@@ -201,25 +207,25 @@ Representing myself as EMC Professional Services and travelling to remote custom
 <br>
 
 
-<div class=date>Feb &#0150; Apr 2002<br>Thousand Oaks, CA</div>
-<div class=company>Amgen</div>
-<div class=title>Solaris Administrator</div>
+<div class="date">Feb &#0150; Apr 2002<br>Thousand Oaks, CA</div>
+<div class="company">Amgen</div>
+<div class="title">Solaris Administrator</div>
 <p>Contracted to provide support during a critical phase in the deployment of a company wide Tibco infrastructure. Required interfacing with management, Tibco contractors, and staff systems administrators.</p>
-<ul class=job>
+<ul class="job">
 <li>Assemble and rack mount Sun Fire V880 servers
 <li>Install and configure Solaris 8 on Sun Fire V880 servers
 <li>Install, test, and configure PCI Fiberchannel controllers in multiple Sun Fire V880s for dual loop redundancy
-<li>Install and configure Veritas Volume Manager (VxVM) for encapsulated and mirrored (RAID 0) root disks, and RAID 0+1 operation.
+<li>Install and configure Veritas Volume Manager (VxVM) for encapsulated and mirrored (RAID 0) root disks, and RAID 0+1 operation. 
 <li>Document all work for systems to be validated by the FDA
 </ul>
 <br>
 
 
-<div class=date>Jun &#0150; Dec 2001<br>Santa Clara, CA</div>
-<div class=company>Agilent Technologies</div>
-<div class=title>Tibco Administrator</div>
+<div class="date">Jun &#0150; Dec 2001<br>Santa Clara, CA</div>
+<div class="company">Agilent Technologies</div>
+<div class="title">Tibco Administrator</div>
 <p>Member of a team responsible for administering a large middleware application called Tibco. This application is used by large projects within the company and it demands 24x7 support and 99.9% uptime.</p>
-<ul class=job>
+<ul class="job">
 <li>Create a Perl CGI powered website enabling frontline support to view status and perform operations on Tibco.
 <li>Write many start and stop automation scripts to be used by internal application developers.
 <li>Handle the setup of new servers, install Tibco and setup Tibco routing. This involved usage of many unix skills as all Tibco servers were run on HP-UX.<BR>
@@ -230,11 +236,11 @@ Representing myself as EMC Professional Services and travelling to remote custom
 <br>
 
 
-<div class=date>Jul 2000 &#0150; Mar 2001<br>Burlingame, CA</div>
-<div class=company>Infrasearch</div>
-<div class=title>Senior Unix Systems Administrator</div>
+<div class="date">Jul 2000 &#0150; Mar 2001<br>Burlingame, CA</div>
+<div class="company">Infrasearch</div>
+<div class="title">Senior Unix Systems Administrator</div>
 <p>Responsible for designing, implementing, and maintaining a new IT infrastructure including basic services such as DNS, SMTP, NAT, IMAP, CVS, and HTTP. Designed and implemented offsite server and network infrastructure to support the company's main product.</p>
-<ul class=job>
+<ul class="job">
 <li>Contact vendors for quotes and choose vendor for all servers
 <li>Spec all servers, based on usage estimates, and communication with programmers
 <li>Choose server colocation facility
@@ -246,7 +252,6 @@ Representing myself as EMC Professional Services and travelling to remote custom
 </ul>
 <br>
 
-<!--
 <B><FONT SIZE=+1>Selectica</FONT> &nbsp; 7/99 - 7/00<BR>
 Webmaster</B><BR>
 Repair and update CGI scripts. Fix browser incompatibilities.
@@ -257,19 +262,18 @@ Worked with MIS department to determine their needs, and then implemented them.<
 <B><FONT SIZE=+1>Sanmina</FONT> &nbsp; 5/00 - 8/00<BR>
 Unix Systems Administrator</B><BR>
 Troubleshoot and repair problems with the company's ftp sites. Write CGIs and scripts to streamline and automate IT procedures company wide. Made improvements to helpdesk tools used to fix common problems.<BR>
-<ul class=job>
+<ul class="job">
 <li>Set up AMANDA, a network backup tool
 <li>Write CGIs to improve business efficiency
 </ul>
 <BR>
--->
 
-<div class=date>Aug 1999 &#0150; May 2000<br>Santa Clara, CA</div>
-<div class=company>Intel Online Services</div>
-<div class=title>Senior Unix Systems Administrator</div>
+<div class="date">Aug 1999 &#0150; May 2000<br>Santa Clara, CA</div>
+<div class="company">Intel Online Services</div>
+<div class="title">Senior Unix Systems Administrator</div>
 <p>Responsible for setup, configuration, and management of 45 Sun Ultra 10 workstations. Part of a small team responsible for administration of a total of 2 Sun Ultra Enterprise 6500s, 12 Sun Ultra Enterprise 4500s,
 20 Ultra Enterprise 450s. Many of these servers are clustered using Sun Cluster 2.2.</p>
-<ul class=job>
+<ul class="job">
 <li>Configure Jumpstart install based on workstation requirements
 <li>Jumpstart 45 workstations
 <li>Maintain Sun HA clusters running Sun Cluster 2.2
@@ -285,7 +289,7 @@ Troubleshoot and repair problems with the company's ftp sites. Write CGIs and sc
 <!--
 <B><FONT SIZE=+1>BeOpen.com</FONT> &nbsp; 4/00 - 5/00<BR>
 Unix Systems Administrator</B><BR>
-<ul class=job>
+<ul class="job">
 <li>Installed and configured WebTrends
 <li>Designed and wrote server health monitor/capacity planning tool
 <li>Install MySQL, PHP, Apache
@@ -312,7 +316,7 @@ Internet Source Engineer</B><BR>
 Write scripts to perform data checking and copying. Edit and debug Perl 5 and C CGIs. Communicate with other team members. Manage NT 4 and IIS 4 server. Work with customers to
 resolve issues.
 
-<ul class=job>
+<ul class="job">
 <li>Successfully completed a large team project that involved moving over 3000 websites, this saved the company money by letting them run one network rather than two
 <li>Edited Perl 5 CGIs to solve problems with new architecture and directory tree, which saved customers from having to fix them, and reduced the helpdesk load
 <li>Located and solved problems in HTML documents to correct website problems and eliminate customer downtime.
@@ -326,7 +330,7 @@ resolve issues.
 Webmaster</B><BR>
 Create original designs for websites. Meet with managers to get feedback on website designs. Implement finalized designs into easily maintainable websites.
 
-<ul class=job>
+<ul class="job">
 <li>Conceived, designed and implemented websites for internal departments
 <li>Assess managent requirements to fine tune website designs
 <li>Created and edited website graphics using Photoshop and Illustrator
@@ -337,7 +341,7 @@ Create original designs for websites. Meet with managers to get feedback on webs
 Solaris Administrator</B><BR>
 Install and configure Solaris. Install and configure various servers as needed by school staff. Teach staff how to use and administer Solaris.
 
-<ul class=job>
+<ul class="job">
 <li>Provided Solaris support
 <li>Installed and configured Solaris 2.5.1 on 3 Ultra 1s and 3 Netra-is
 <li>Installed and configure http and online education server software
@@ -348,12 +352,11 @@ Install and configure Solaris. Install and configure various servers as needed b
 </ul>
 -->
 
-<hr>
-<div class=section>References</div><br>
+<div class="section">References</div><br>
 <p>Professional and personal references are available upon request.</p>
 <BR>
 <BR>
 <!--<FONT SIZE=-1><CENTER>This document is also available as <A HREF="resume.cgi">ascii text</A></CENTER>-->
-</BODY>
-</HTML>
-
+</div>
+</body>
+</html>
