@@ -5,88 +5,74 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,800" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <style>
-#container {
-  background: #ededed;
-  padding: 5em;
-}
 body {
   font-family: 'Open Sans', Arial, Sans-Serif;
-  background: #fafafa;
-  margin-left: 3em;
-  margin-right: 3em;
+  background: white;
+  margin-left: 7em;
+  margin-right: 7em;
+}
+#container {
 }
 #heading {
-  padding-bottom: 2em;
+  font-family: 'Montserrat', Arial;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 #name {
-  //font-family: "Montserrat", Impact, Arial;
-  font-family: "Montserrat";
+  font-family: "Montserrat", Impact, Arial;
   font-size: 250%;
-  padding-top: 1em;
-  padding-bottom: .25em;
-  line-height: 0.5em;
   font-weight: 800;
 }
-#contact {
-}
 #title {
+  display: inline-block;
+}
+#contact {
+  color: gray;
+  float: right;
+}
+#description {
   font-weight: 700;
 }
-p {
-  text-indent: 0em;
-}
-a:link {
-  color: #009999;
+a:link, a:visited {
+  color: inherit;
   text-decoration: none;
 }
-a:visited {
-  color: #009999;
-  text-decoration: none;
-}
-.section {
+.section h2 {
   font-family: 'Montserrat', Impact, Arial;
   text-transform: uppercase;
-  font-size: 125%;
+  font-size: 130%;
   font-weight: 500;
-  line-height: .5em;
-  padding-top: .75em;
-  padding-bottom: .5em;
-  border-top: 1px solid gray;
+  padding-top: .25em;
+  border-top: 2px groove #eee;
+  margin-top: 1.5em;
+}
+.section:nth-of-type(3) > ul {
+  column-count: 3;
+  list-style-type: none;
+}
+.job {
+  margin-top: 2em;
+}
+.job:first-of-type {
+  margin-top: 0;
 }
 .date {
   float: right;
-  font-size: 100%;
   color: gray;
-  font-weight: bold;
   text-align: right;
 }
 .company {
-  font-size: 110%;
+  font-size: 120%;
   font-weight: bold;
-  padding-right: 2em;
 }
 .title {
-  font-size: 100%;
   font-style: italic;
 }
 ul {
-  list-style-type: circle; 
+  list-style-type: circle;
   padding-left: 2em;
-  margin-left: 0px;
+  padding-right: 2em;
 }
-li {
-  #list-style-type: none;
-}
-li:before {
-  #content: '\2022';
-  #color: red;
-  #padding-left: 0px;
-}
-
-ul.job {
-  font-size: 100%;
-}
-
 </style>
 </head>
 <body>
